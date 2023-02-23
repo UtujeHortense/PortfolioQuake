@@ -4699,3 +4699,7 @@ input, select, textarea {
 		display: inline-block;
 
 	}
+	.responsive_img {
+		width: 100%;
+		height: auto;
+	}
