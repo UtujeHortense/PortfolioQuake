@@ -4687,3 +4687,19 @@ input, select, textarea {
 		}
 
 	}
+
+	.keyword {
+											
+		margin-right: .7rem;
+		margin-bottom: 1rem;
+		padding: .2rem 1rem;
+		background: #b396c4;
+		border-radius: 2em;
+		text-decoration: none;
+		display: inline-block;
+
+	}
+	.responsive_img {
+		width: 100%;
+		height: auto;
+	}

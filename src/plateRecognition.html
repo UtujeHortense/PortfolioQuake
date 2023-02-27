@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Articles - Hortense Utuje</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<meta name="keywords" content="HTML5, Matlab, Python" />.
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../generic.html" class="logo">ARTICLES</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../index.html">Browse projects</a></li>
+							<li class="active"><a href="../generic.html">Articles</a></li>
+							<li><a href="../education.html">Education</a></li>
+							<!--<li><a href="elements.html">Demos</a></li>-->
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/hortense-utuje-5b82581a1/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://www.instagram.com/_utuje/?next=%2F" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/UtujeHortense" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">2022</span>
+									<h1>Vehicle Plate Recognition</h1>
+								</header>
+					
+									<h2>About</h2>
+									<p>This project's objective is to extract plate numbers of vehicles from images. The scope was limited to European parked cars for time and feasability reasons.
+										The automatic extraction of vehicle plate number(licence plates) is widely used today in applications such as parking lot managment systems, highway systems and more.
+										Matlab was used as the development environment.
+										<a href="https://github.com/UtujeHortense/VehiclePlateRecognition.git" target="_blank" ><br><i> <b style="color: green;" > View project on GitHub</b></i></a>
+									</p>
+									<h2>Implementation</h2>
+									<h3>Step 1: Construction of a dataset</h3>
+									<p>The testing dataset for this project was manually created with images freely available online. It includes 23 images of different colors, different distances from the camera and different angles.
+										All vehicles in this database are cars and they are either photographed from the front or from the back.
+										<a href="https://github.com/UtujeHortense/VehiclePlateRecognition/tree/main/Pictures" target="_blank" >View dataset</a>
+					
+									</p>
+									<h3>Step 2: Localisation of the plate</h3>
+									<p>The second and very crucial part was to locate the plate in the image. As human beings this process happens in a matter of seconds and with no apparent extra effort on our behalf.
+										With projects such as this , the computer has to learn or use an algorithm to accurately locate the required region. In this case the algorithm was as follows:
+										<h4>Original Image</h4>
+										<p>This is an example image from out dataset.</p>
+										<img src="../images/compVision/ogImage.jpg" alt="Original image"><br>
+										<h4>Cropped Image</h4>
+										<p>Considering the previous image, the next step would be to crop the image in half because the licence plate is not likely to be found in the top half of the image.
+											This was concluded after careful observation on multiple images of parked cars.
+										</p>
+										<img src="../images/compVision/croppedImage.png" alt="croppedImage images"><br>
+										<h4>Image with mask</h4>
+										<p>After reducing the noise by cropping the next step is to apply a mask that allows to separate the car from the plate. This is achieved by thresholding.</p>
+										<img src="../images/compVision/maskedImage.png" alt="Masked image"><br>
+										<h4>Binarized Image</h4>
+										<p>The generated image is then binarized in order to create connected components. This is crucial since it allows to apply different criterias in order to choose possible candidates for the licence plate.</p>
+										<img src="../images/compVision/binarizedImage.png" alt="Binarized image"><br>
+										<h4>Candidate</h4>
+										<p>As previously mentioned there are criterias that are checked with the help of information acquired from the connected components. The first one is the area of the object, second is the ratio of height to width
+											which identifies the rectangularity of the object, and lastly the availability of a blue area inside the object in the left side or the immediate outside the object.
+										</p>
+										<img src="../images/compVision/candidateImage.png" alt="Candidate image"><br>
+										<h4>Plate</h4>
+										<p>With careful sorting of possible canditates we get one that matches the criteria which is then considered to be the licence plate.</p>
+										<img src="../images/compVision/plateImage.png" alt="Plate image"><br>
+									</p>
+									<h3>Step 3: Cleaning</h3>
+									<p>Once step 2 is complete, the obtained image can then be cleaned. This means that it goes through a process of thresholding to highlight the numbers and letters.
+										The cleaning also removing the background, removing any remaining noise and complementing the image to faciliate the next step.</p>
+									<img src="../images/compVision/cleanImage.png" alt="Clean Image"><br>
+									</p>
+									<h3>Step 4: Extraction alphanumeric symbols</h3>
+									<p>For this step the OCR method provided by matlab was used to extract the alphanumeric characters from the image. This process is highly affected by the quality of the image 
+										that its given to treat. This is why we added the previous step to clean the plate before passing it to the method. As a result it is able to extract the full licence plate.
+									<img src="../images/compVision/ocrImage.png" alt="Ocr image"><br>
+				
+									</p>
+									<h3>Step 5: Validation</h3>
+									<p>The very last step was to validate the pipeline by using a different dataset to obserserve its performate on data it was not tested on.
+										The results showed that even tho the pipeline was overfitted for the testing dataset in the right condition it performed as expected.
+									</p>
+									
+									<div id="keyword-container">
+										<span class="keyword">Matlab</span>
+									  </div>
+									  
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; HortenseUtuje</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
