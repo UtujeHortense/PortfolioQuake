@@ -1,6 +1,6 @@
 # Site settings
 title: A portfolio 
 description: A collection of personal and school projects
-baseurl: "/" # If your site is not hosted at the root of the domain, specify the base URL here (e.g., /my-site)
+baseurl: "/PortfolioQuake" # If your site is not hosted at the root of the domain, specify the base URL here (e.g., /my-site)
 
 # Build settings
