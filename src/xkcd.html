@@ -1,5 +1,5 @@
 ---
-permalink: /articles
+permalink: /xkcd
 ---
 <!DOCTYPE HTML>
 <!--
@@ -13,9 +13,15 @@ permalink: /articles
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="back/xkcd_comics.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+		<meta name="keywords" content="HTML5, Matlab, Python" />.
 	</head>
+	<style>
+		a {
+			color: green;
+		}
+	</style>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -23,7 +29,7 @@ permalink: /articles
 
 				<!-- Header -->
 					<header id="header">
-						<a href="/PortfolioQuake/articles" class="logo">ARTICLES</a>
+						<a href="/articles" class="logo">ARTICLES</a>
 					</header>
 
 				<!-- Nav -->
@@ -46,25 +52,22 @@ permalink: /articles
 
 						<!-- Post -->
 							<section class="post">
-								<!--<iframe src="https://giphy.com/embed/j2vsFar0VthOU" width="480" height="221" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ryan-reynolds-deadpool-j2vsFar0VthOU"></a></p>-->
-								<a href="https://xkcd.com/" target="_blank"><img id= "comic" src="" alt=""></a>
-										<div class="col-6 col-12-small">
-											<h3>Random</h3>
-											<ul>
-												<a href="/PortfolioQuake/xkcd"><li>XKCD Comics</li></a>
-												<a href=""><li>Attention is all you need</li></a>
-												<a href=""><li>Gradient descent in deep learning</li></a>
-											</ul>
-											<h3>Projects</h3>
-											<ul>
-												<a href="/PortfolioQuake/plateRecognition"><li>Computer Vision - Vehicle Plate recognition</li></a>
-												<a href="/PortfolioQuake/easyterms"><li>NLP - Text summerization</li></a>
-												<a href="/PortfolioQuake/pisoplanner"><li>Web development - PisoPlanner</li></a>
-												<a href="/PortfolioQuake/balanceboard"><li>Computer Vision - Balance board</li></a>
-
-											</ul>
-
-										</div>
+								<header class="major">
+									<span class="date">2023</span>
+									<h1>XKCD Comics</h1>
+								</header>
+					
+								<!--Try embeding .md file in html-->
+								<md-block src="/PortfolioQuake/src/xkcd.md">
+									Markdown not found
+								</md-block>
+								
+								<div id="keyword-container">
+									<span class="keyword">Node js</span>
+									<span class="keyword">Javascript</span>
+								
+									</div>
+									  
 							</section>
 
 					</div>
@@ -82,13 +85,13 @@ permalink: /articles
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="/PortfolioQuake/assets/js/jquery.min.js"></script>
+			<script src="/PortfolioQuake/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/PortfolioQuake/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/PortfolioQuake/assets/js/browser.min.js"></script>
+			<script src="/PortfolioQuake/assets/js/breakpoints.min.js"></script>
+			<script src="/PortfolioQuake/assets/js/util.js"></script>
+			<script src="/PortfolioQuake/assets/js/main.js"></script>
 
 	</body>
 </html>
